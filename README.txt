@@ -23,3 +23,12 @@ curl -X POST -u "apikey:C4aEBzQk4Feg_czj94E-joSMX30z_QZLGy5TDarPfVzC" \
 --form "images_file=@TEST.jpg" \
 --form "classifier_ids=signlanguage_514642511,default" \
 "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
+
+To run the server use the following command :
+python3 server.py
+
+To install flask, pip and required packages use the following commands :
+sudo apt install python3-pip
+sudo pip install Flask
+sudo pip install watson-developer-cloud
+Note : In case you have different version of pip use that version eg : pip3
