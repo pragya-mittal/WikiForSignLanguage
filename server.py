@@ -10,7 +10,7 @@ from watson_developer_cloud import VisualRecognitionV3
 app = Flask(__name__)
 
 UPLOAD_FOLDER = os.path.basename('uploads')
-print UPLOAD_FOLDER
+print (UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 visual_recognition = VisualRecognitionV3(version='2018-03-19',
@@ -37,7 +37,7 @@ def upload_file():
                 threshold='0.5', classifier_ids='signlanguage_514642511'
                 ).get_result()
 
-    print json.dumps(classes, indent=2)
+    print (json.dumps(classes, indent=2))
     return jsonify(classes)
 
 if __name__ == '__main__':
